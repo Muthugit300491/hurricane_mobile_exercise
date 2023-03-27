@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ProductApp</string>
+    <string name="signin">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign Up</string>
+    <string name="back_to_signin">Back to SignIn</string>
+    <string name="email">Email</string>
+    <string name="welcome"> Welcome Dashboard</string>
+    <string name="categories">Categories</string>
+    <string name="products">Products</string>
+    <string name="product_details">Product Details</string>
+    <string name="banking">Banking Items</string>
+    <string name="description"><![CDATA[<b>Description: </b>]]></string>
+    <string name="features"><![CDATA[<b>Features</b>]]></string>
+    <string name="benefits"><![CDATA[<b>Benefits</b>]]></string>
+    <string name="logout">Sign Out</string>
+    <string name="no_benefits_found">No Benefits Found</string>
+    <string name="no_features_found">No Features Found</string>
+</resources>

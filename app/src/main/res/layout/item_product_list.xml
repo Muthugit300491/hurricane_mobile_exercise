@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.Html"/>
+        <variable
+            name="mProductDetails"
+            type="com.example.productapp.data.model.BankProducts" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        android:fontFamily="@font/gilroy_bold"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        setText="@{mProductDetails.product_code+'-'+mProductDetails.product_name}"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_product"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/_5sdp"
+        imageFromUrl="@{mProductDetails.product_image_landscape}"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_product_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="@{Html.fromHtml(mProductDetails.product_description)}"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_product"/>
+
+    <View
+        android:id="@+id/tv_desc_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@color/grey_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_desc"/>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_product_features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_view"/>
+
+    <View
+        android:id="@+id/features_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@color/grey_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_features"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_product_benefits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/features_view"/>
+
+    <View
+        android:id="@+id/benifits_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@color/grey_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_benefits"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

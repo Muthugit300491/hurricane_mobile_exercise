@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.ProductDetailsActivity">
+<RelativeLayout
+    android:id="@+id/rl_top_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@color/colorPrimary"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:scaleType="centerCrop"
+        android:padding="@dimen/_3sdp"
+        android:tint="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_centerVertical="true"
+        android:src="@drawable/back"/>
+
+    <TextView
+        android:id="@+id/tv_product_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/product_details"
+        android:padding="@dimen/_7sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:gravity="center|start"
+        android:layout_toRightOf="@+id/iv_back"
+        android:fontFamily="@font/gilroy_semibold"
+        android:background="@color/colorPrimary"
+      android:layout_centerVertical="true" />
+
+
+</RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_details_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_margin="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_title"
+        tools:listitem="@layout/item_product_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
